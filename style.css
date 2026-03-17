@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #2b0000, #7a001f, #ff4d6d);
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Botão */
+button {
+  padding: 15px 35px;
+  font-size: 18px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #7a001f;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+/* Carta */
+.carta {
+  background: #fff;
+  color: #333;
+  padding: 30px;
+  border-radius: 20px;
+  width: 350px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.carta.ativa {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.nome {
+  color: #d6336c;
+}
+
+/* Texto */
+#texto {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Fotos */
+.fotos {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fotos img {
+  width: 90px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: 0.5s;
+}
+
+.fotos img.mostrar {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Corações */
+.coracao {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  animation: cair linear forwards;
+}
+
+@keyframes cair {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.nome {
+  color: #d6336c;
+  font-weight: bold;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from {
+    text-shadow: 0 0 5px #ff4d6d;
+  }
+  to {
+    text-shadow: 0 0 20px #ff99ac, 0 0 30px #ff4d6d;
+  }
+}
+
